@@ -7,7 +7,7 @@ const { env } = require("process");
 const { default: slugify } = require("slugify");
 const url = require("url");
 const replaceTemplate = require("./module/replace.js");
-const port = process.env.PORT || 9000;
+const port = process.env.PORT;
 ///////////////////////////////
 //API
 const Tempoverview = fs.readFileSync(
@@ -65,3 +65,4 @@ const server = http.createServer((req, res) => {
 server.listen(port, () => {
   console.log("Listening to the request on port 8000");
 });
+
